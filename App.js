@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, FlatList, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Import Ionicons from Expo
+import 'dotenv/config'; // Add this line at the top of App.js
 
-const API_KEY = 'cc14780b'; // Replace with your actual OMDB API key
+
+const API_KEY = process.env.OMDB_API_KEY;
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
